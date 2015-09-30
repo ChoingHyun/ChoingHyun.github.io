@@ -1,8 +1,6 @@
-#Hux Blog
+#Huiyuan Blog
 
-###[View Live Hux Blog &rarr;](http://huxpro.github.io)
-
-![](http://huangxuan.me/img/blog-desktop.jpg)
+###[View Huiyuan Blog &rarr;](http://www.changhuiyuan.com)
 
 
 ## New Feature (V1.2）
@@ -173,5 +171,5 @@ The iframe will be automatically resized to adapt different form factor and the 
 
 ## Thanks
 
-This theme is forked from [IronSummitMedia/startbootstrap-clean-blog-jekyll](https://github.com/IronSummitMedia/startbootstrap-clean-blog-jekyll)  
+This theme is forked from [Hux](https://github.com/Huxpro/huxpro.github.io)  
 Thanks Jekyll and Github Pages!
