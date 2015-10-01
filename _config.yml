@@ -9,11 +9,11 @@ url: "http://ChoingHyun.github.io"
 
 # SNS settings
 RSS: false
-weibo_username:     changhuiyuan1992
+weibo_username:     378920728
 zhihu_username:     men-eric
 github_username:    ChoingHyun
 #twitter_username:  changhuiyuan1992
-facebook_username:  changhuiyuan1992
+#facebook_username:  changhuiyuan1992
 
 
 # Build settings
@@ -56,5 +56,5 @@ friends: [
     {
         title: "刘兴的博客",
         href: "http://pangjiuzala.github.io/"
-    } 
+    }
 ]
