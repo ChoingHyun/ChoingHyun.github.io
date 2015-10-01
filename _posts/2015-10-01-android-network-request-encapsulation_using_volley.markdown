@@ -12,7 +12,7 @@ tags:
     
 ---
 **什么是Volley**
-废话连篇，在稍微介绍下，Volley是Google在2013年I/O大会推出的，相对来说比较成熟，适用于数据量较小，请求频繁地情况，不擅长于大文件的请求响应。现在也有其他非常优秀的第三方网络请求库，OKHTTP，有时间待做研究。
+废话连篇，再稍微介绍下，Volley是Google在2013年I/O大会推出的，相对来说比较成熟，适用于数据量较小，请求频繁地情况，不擅长于大文件的请求响应。现在也有其他非常优秀的第三方网络请求库，OKHTTP，有时间待做研究。
 
 **为什么要对Volley进行封装** 
 - 为了代码的重用。在工程中，如果有较多API的请求，将出现大量重复的Volley库请求、回调代码，这明显是不能忍受的。
@@ -112,7 +112,7 @@ tags:
         mRequest.sendRequest(RequestParams.LOGIN, getTypeOneURL(LOGIN_URL), map, callback);
     }
     
-4.此时看一下<b>RequestHelper</b>的代码，是对Volley请求的封装，也是最初的梦想，对下面的代码实现了复用，在sendRequest中第一个参数type，针对每个API都有不同的值，用于<b>ResponseHander</b>对请求进行分发不同对象的解析：
+4.此时看一下<b>RequestHelper</b>的代码，是对Volley请求的封装，也是最初的梦想，对下面的代码实现了复用，在sendRequest中第一个参数type，针对每个API都有不同的值，用于<b>ResponseHander</b>对请求进行分发不同对象的解析，同时可设置超时策略：
 
 	private static RequestHelper instance;
     private RequestQueue mRequestQueue;
@@ -180,7 +180,7 @@ tags:
         mRequestQueue.cancelAll(mContext);
     }
     
-5.请求成功，对数据进行分发，此时该ResponseHandler上场了，对数据解析后，则回调到Activity，完成了整个请求的工作：
+5.请求成功，对数据进行分发，此时该ResponseHandler上场了，对数据解析后，则回调到Activity，完成了整个请求的工作。这样即使有再多的请求，代码结构也是清晰、容易维护：
 
 	public static final int SUCCESS = 0;
     public static final int RESPONSE_ERROR = -1;
@@ -237,9 +237,10 @@ tags:
                 break;
                 //还有许许多多不同请求对应的case，如果请求api特别多，此类将显得十分臃肿，可以通过功能模块再次细分
            }
+
 **总结**
 Github也有不少开源的基于Volley的二次封装项目，但是不离其宗的是数据回调的使用，都是基于Activity实现回调接口，请求注册这个接口，响应完成回调的一个过程，不少用到了建造者等设计模式，降低耦合度。
 用过Volley的同仁也知道，Volley除了提供StringRequest之外，还提供了JsonObject，在实践中有些项目中会有问题。StringRequest通过Gson将json转为bean也很方便。
 欢迎拍砖。
-转载请申明原文链接：
+转载请申明原文链接：http://www.changhuiyuan.com/2015/10/01/android-network-request-encapsulation_using_volley/
  
