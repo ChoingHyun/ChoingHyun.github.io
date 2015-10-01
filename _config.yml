@@ -34,7 +34,7 @@ kramdown:
 
 # Duoshuo settings
 # please set your own DuoShuo account in `post.html` and `about.html`
-useDuoshuo: true    # use both Comment and Share
+useDuoshuo: false    # use both Comment and Share
 useShare: true      # use Comment only. seeing the Share component is depend on Comment so we can NOT use share only.
 
 
