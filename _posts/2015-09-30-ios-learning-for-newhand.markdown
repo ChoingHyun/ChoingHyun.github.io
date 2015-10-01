@@ -19,6 +19,7 @@ Starting learining by reading the book *The Big Nerd Ranch Guide 4th Edition*
 
 ### The Words
 There's some concept what I can't recognize before in the book,I find the mesns from search engine.The concept list:
+
 #### big ideas
 大观念
 	
@@ -47,6 +48,9 @@ Mimicry is a powerful form of learning.
 
 #### boilerplate
 Too much boilerplate gets in the way of learning how things work.
+
+#### break down
+划分
 
 ### Learning Tip
 
