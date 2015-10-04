@@ -1,12 +1,13 @@
 ---
 layout:     post
-title:      "横店影视城记"
+title:      "横店影视城记-明清宫苑"
 subtitle:   "中国好莱坞-横店一日游"
 date:       2015-10-03
 author:     "Eric"
 header-img: "img/home-bg-art.jpg"
 tags:
     - 横店
+    - 明清宫苑
     - 出行
 ---
 
@@ -23,15 +24,16 @@ tags:
 ![side](http://7xn8ba.com1.z0.glb.clouddn.com/hengdianIMG_1751.jpg?imageView2/2/w/1080)
 太和殿/中和殿/保和殿的其中之一，(⊙o⊙)不知道是哪个
 ![build](http://7xn8ba.com1.z0.glb.clouddn.com/hengdianIMG_1753.jpg?imageView2/2/w/1920)
-昔日，大清王朝的旗帜
+昔日，大清王朝的旗帜，再辉煌的朝代也有没落的那一天。
 ![flag2](http://7xn8ba.com1.z0.glb.clouddn.com/hengdianIMG_1757.jpg)
-几张后花园的照片，和北京的比确实细了一点
+几张后花园的照片，树和北京的比细了一些，毕竟还年轻
 ![garden](http://7xn8ba.com1.z0.glb.clouddn.com/hengdianIMG_1764.jpg?imageView2/2/w/1080)
 ![garden2](http://7xn8ba.com1.z0.glb.clouddn.com/hengdianIMG_1765.jpg?imageView2/2/w/1080)
-爸爸去哪儿剧组拍摄地的梨树，注意，上面真的有梨。
+爸爸去哪儿剧组拍摄地的梨树，注意，上面真的有梨。下面的梨已被游客偷吃光了。。
 ![pear](http://7xn8ba.com1.z0.glb.clouddn.com/hengdianIMG_1769.jpg?imageView2/2/w/1080)
 明清的街道
 ![street](http://7xn8ba.com1.z0.glb.clouddn.com/hengdianIMG_1772.jpg?imageView2/2/w/1080)
 乱入一张监狱的图
 ![posion](http://7xn8ba.com1.z0.glb.clouddn.com/hengdianIMG_1776.jpg?imageView2/2/w/1080)
-今天先更新到这里，图片是经过程序压缩过的，原图上传，毫无PS~
+树叶红了，秋天要到了
+![side tree](http://7xn8ba.com1.z0.glb.clouddn.com/hengdianIMG_1778.jpg?imageView2/2/w/1920)
