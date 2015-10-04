@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "横店影视城记（二）-秦王宫"
+title:      "横店影视城记（二）秦王宫"
 subtitle:   "中国好莱坞-横店一日游"
 date:       2015-10-04
 author:     "Eric"
