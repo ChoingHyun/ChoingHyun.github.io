@@ -4,13 +4,13 @@ title:      "横店影视城记（三）假装在#HongKong#"
 subtitle:   "中国好莱坞-横店一日游"
 date:       2015-10-04
 author:     "Eric"
-header-img: "img/post_qin.png"
+header-img: "img/post_bg_HK.jpg"
 tags:
     - 横店
     - 香港街
 ---
 HongKong,I'm coming~~~
-先自我揭发，这里是横店，NOT HONGKING!!!
+先自我揭发，这里是横店，NOT HONGKONG!!!
 ![Outside](http://7xn8ba.com1.z0.glb.clouddn.com/hengdianIMG_1887.jpg?imageView2/2/w/1080)
 图片数量有限，先发一个景区导览凑数量，我好像看过《乔家大院》?(⊙o⊙)不记得了。。
 ![guide](http://7xn8ba.com1.z0.glb.clouddn.com/hengdianIMG_1889.jpg?imageView2/2/w/1080)
