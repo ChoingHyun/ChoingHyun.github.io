@@ -13,13 +13,9 @@ tags:
 **1.NDK的下载与环境变量的配置。**
 笔者实在Mac上进行实践的，在环境变量上也走了一点弯路。
 mac 配置环境变量，有三种不同级别的环境变量，NDK的配置使用第三种
-1./etc/profile   （建议不修改这个文件 ）
- 全局（公有）配置，不管是哪个用户，登录时都会读取该文件。
-2./etc/bashrc    （一般在这个文件中添加系统级环境变量）
- 全局（公有）配置，bash shell执行时，不管是何种方式，都会读取此文件。
- 我在这里加入mysqlstart、mysql和mysqladmin命令的别名，保证每一个用户都可以使用这3个命令。
-3.~/.bash_profile  （一般在这个文件中添加用户级环境变量）
-（注：Linux 里面是 .bashrc 而 Mac 是 .bash_profile）
+1./etc/profile 全局（公有）配置，不管是哪个用户，登录时都会读取该文件。
+2./etc/bashrc  全局（公有）配置，bash shell执行时，不管是何种方式，都会读取此文件。
+3.~/.bash_profile  一般在这个文件中添加**用户级**环境变量（注：Linux 里面是 .bashrc 而 Mac 是 .bash_profile）
 如果想立刻生效，则可执行下面的语句：
 $ source .bash_profile（这是文件名）
 这是笔者的环境变量配置，供参考，一个是Android的，一个是NDK的
@@ -27,13 +23,14 @@ $ source .bash_profile（这是文件名）
 	export PATH="$PATH:/Users/changhuiyuan/Library/Android/sdk/platform-tools"
 	export NDK_ROOT="/Users/changhuiyuan/Documents/Android/android-ndk-r10e"
 	export PATH="$PATH:$NDK_ROOT"
-`
+
 备注：在配置过程中，注意检查拼写，以及使用引文引号，同时确保路径的完整性。
 配置完成，在终端中输入*ndk-make*指令进行测试，出现以下内容则证明环境变量配置正确：
 
 	Android NDK: Could not find application project directory !    
 	Android NDK: Please define the NDK_PROJECT_PATH variable to point to it.    
 	/Users/changhuiyuan/Documents/Android/android-ndk-r10e/build/core/build-	local.mk:143: *** Android NDK: Aborting    .  Stop.
+	
 **2.编写带native方法的Java类，编译为字节码**
 
 	package cn.edu.zju.chy.jni;
@@ -69,6 +66,7 @@ $ source .bash_profile（这是文件名）
 	}
 	#endif
 	#endif
+	
 在项目main路径下，创建jni目录，将头文件拷贝到jni下。同时，设置工程的NDK路径：File-Project Structure。
 **3.实现头文件**
 头文件的实现较为简单，需要注意include的头文件
@@ -93,8 +91,7 @@ $ source .bash_profile（这是文件名）
             for (test_i = 0; test_i < width; test_i++) {
                 times ++;
                 pic[test_i][test_j] += test_i * test_j + test_z;
-                //CV_IMAGE_ELEM(downframe_gray,unsigned char,test_j,test_i)=test_i*test_j+test_z/1000;//CV_IMAGE_ELEM(downframe_gray,unsigned char,0,0)+CV_IMAGE_ELEM(downframe_gray,unsigned char,0,0)+test_i+test_j+test_z;
-  	          }
+            }
   	      }
   	  }
     return times;
@@ -105,21 +102,17 @@ ndk中一共需要两个makefile文件需要编写：Android.mk与Application.mk
 *Android.mk*包含了与编译c文件的路径、生成文件的名称等信息，如下：
 
 	LOCAL_PATH := $(call my-dir)
-
 	include $(CLEAR_VARS)
-
 	LOCAL_MODULE := jni
-
 	LOCAL_SRC_FILES :=source/cn_edu_zju_chy_jni_JNI.c
-	
 	include $(BUILD_SHARED_LIBRARY)
+	
 *Application.mk*包含了针对不同运行平台的配置等信息，如下：
 
 	# $Id: Application.mk 212 2015-05-15 10:22:36Z oparviai $
 	#
 	# Build library bilaries for all supported architectures
 	#
-
 	APP_ABI := armeabi armeabi-v7a x86 mips
 	APP_OPTIM := release
 	APP_STL := stlport_static
