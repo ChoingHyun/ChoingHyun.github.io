@@ -9,7 +9,7 @@ tags:
     - Android
     - NDK
 ---
-搭NDK环境，到程序的运行，用了一天的时间，也参考了网上其他教材，在过程中踩了NDK部下的各种坑。
+在搭NDK环境的时候，参考了网上其他资料，在过程中踩到一些坑。总的流程如下：
 **1.NDK的下载与环境变量的配置。**
 笔者实在Mac上进行实践的，在环境变量上也走了一点弯路。
 mac 配置环境变量，有三种不同级别的环境变量，NDK的配置使用第三种
@@ -120,11 +120,14 @@ ndk中一共需要两个makefile文件需要编写：Android.mk与Application.mk
 
 **5.ndk-build**
 在项目中，通过终端进入项目中jni目录的父目录，执行*ndk-build*命令，若没有语法错误，会在libs下面生成针对不同平台的.so动态连接库文件。大功告成！此时，工程结构如下：
-![demo](http://7xn8ba.com1.z0.glb.clouddn.com/demo.png)
+![demo](http://7xn8ba.com1.z0.glb.clouddn.com/demo.png?imageView2/2/h/540))
 **6.运行**
 gradle.property 中添加：android.useDeprecatedNdk=true
 RUN~
 <a href="https://github.com/ChoingHyun/NDK-Simple-Demo" target="_blank">源码</a>
+**7.说明**
+如果在java类中添加了native声明的方法，需要重新进行javac，javah重新生成头文件，重新实现，也就是从步骤2重新开始。
+如果只是修改c方法内的实现，只需要执行第五步，重新make生成新的.so后，即可运行。
 
 
 
